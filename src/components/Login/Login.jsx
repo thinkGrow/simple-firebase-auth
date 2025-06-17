@@ -41,7 +41,9 @@ const Login = () => {
     signInWithPopup(auth, providerGitHub)
       .then((result) => {
         console.log(result.user);
-        setUser(result.user);
+        const loggedInUser = result.user;
+
+        setUser(loggedInUser);
       })
       .catch((error) => {
         console.log(error);
